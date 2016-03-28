@@ -1,16 +1,30 @@
 {
-  "name": "new-project",
-  "description": "",
+  "name": "unit-testing-functions",
+  "description": "1. Fork [this repository](https://github.com/TIY-Austin-Front-End-Engineering/unit-testing-functions) by clicking the fork button on the upper right corner of this page. This will copy the repository on to your GitHub account. 1. Clone **the forked version** of the repository. When you copy the clone URL it should have your github username in it **not TIY-Austin-Front-End-Engineering**. 1. Inside of your cloned project directory run `npm install`. 1. Read through the `functions.js` file in your cloned repo. For each one of the functions described you should do the following:   1. Write comments that describe the arguments that are getting passed into the function (inputs). For each argument include...     * the type of data (string, number, boolean, array, object) that it should be     * one example valid value that could be passed in to that argument   1. Write comments that describe the return value of the function, what type should it be?   1. Add, commit, and push your code   1. Create a new file to test that function inside of the test directory. Write out at least three unit tests for the function.   1. Add, commit, and push your code   1. Write out comments that describe how to implement the function. How will you use the provided inputs to achieve the desired output?   1. Write code to implement the function.   1. Test your code against your unit tests by running `npm test`. All of your tests should pass.   1. Test your code against the instructor provided unit tests by running `npm run instructor-tests`. All of the tests should pass.",
   "version": "1.0.0",
   "main": "index.html",
   "scripts": {
-    "test": "./node_modules/.bin/mocha",
-    "instructor-test": "./node_modules/.bin/mocha .it"
+    "test": "mocha",
+    "instructor-test": "mocha .it"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "me!",
+  "license": "MIT",
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^2.4.5"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tinydinosaurs/unit-testing-functions.git"
+  },
+  "keywords": [
+    "unit-testing"
+  ],
+  "bugs": {
+    "url": "https://github.com/tinydinosaurs/unit-testing-functions/issues"
+  },
+  "homepage": "https://github.com/tinydinosaurs/unit-testing-functions#readme"
 }

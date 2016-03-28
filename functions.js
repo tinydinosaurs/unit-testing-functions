@@ -6,6 +6,12 @@
  *
  * If the input is invalid throw an 'Invalid Input' exception.
  */
+
+ // input: string
+ // output: boolean
+ // example arg: 'hello'
+ // expected outcome: false
+
 function checkData(inputString) {
 	// your code goes here
 }
@@ -17,6 +23,12 @@ function checkData(inputString) {
  *
  * If the input is invalid throw an 'Invalid Input' exception.
  */
+
+// input: two arrays
+// output: one array
+// example args: [1, 2, 3, 4], [5, 6, 7, 8]
+// expected outcome: [1, 2, 3, 4, 5, 6, 7, 8]
+
 function concatenateArrays(a, b) {
 	// your code goes here
 }
@@ -30,6 +42,12 @@ function concatenateArrays(a, b) {
  *
  * If the input is invalid throw an 'Invalid Input' exception.
  */
+
+// input: string
+// output: string
+// example arg: 'teXas'
+// expected outcome: 'Texas'
+
 function fixProperNoun(noun) {
 	// your code goes here
 }
@@ -41,6 +59,8 @@ function fixProperNoun(noun) {
  *
  * If the input is invalid throw an 'Invalid Input' exception.
  */
+
+
 function sortLetters(inputString) {
 	// your code goes here
 }
@@ -52,6 +72,12 @@ function sortLetters(inputString) {
  *
  * If the input is invalid throw an 'Invalid Input' exception.
  */
+
+// input: number
+// output: number
+// example arg: -2
+// expected outcome: 2
+
 function absVal(integer) {
 	// your code goes here
 }
@@ -64,15 +90,26 @@ function absVal(integer) {
  * If the input is invalid throw an 'Invalid Input' exception.
  */
 
+ // input: two numbers
+ // output: one number
+ // example arg: 7, 2022
+ // expected outcome: 7
+
 /*
  * PROBLEM `myMax`: (normal) - Actual Interview Question
- * Write a function called `myMax` that takes an array of integers ans returns
+ * Write a function called `myMax` that takes an array of integers and returns
  * the largest.
  *
  * If the input is invalid throw an 'Invalid Input' exception.
  *
  * Insane mode: do this without using a for loop.
  */
+
+// input: array
+// output: number
+// example arg: [1, 1, 3, 5, 8, 13, 21, 34, 55]
+// expected outcome: 55
+
 
 /*
  * PROBLEM `getMonth`: (normal)
@@ -86,11 +123,23 @@ function absVal(integer) {
  * If the input is invalid throw an 'Invalid Input' exception.
  */
 
+// input: number
+// output: string
+// example arg: 5
+// expected outcome: 'May'
+
+
 /*
  * PROBLEM `randomElement`: (normal)
  * Create a function called `randomElement` that takes an array of values and
  * returns one randomly selected value from that array.
  */
+
+// input: array
+// output: number, string, boolean, array, function, or object
+// example arg: [3, 'bunnies', ['are', 'plenty'], {hi: 'bunny, hello: 'rabbit'}]
+// expected outcome: ['are', 'plenty']
+
 
 /*
  * PROBLEM `studentPairs`: (normal)
@@ -98,6 +147,11 @@ function absVal(integer) {
  * student names and returns an array of randomly selected pairs of students
  * (array of arrays).
  */
+
+ // input: an array
+ // output: an array of arrays
+ // example arg: ['Dana', 'Will', 'Jen', 'Martin']
+ // expected outcome: [['Dana', 'Jen'], ['Will', 'Martin']]
 
 /*
  * PROBLEM `sumSquares`: (normal)
@@ -107,6 +161,12 @@ function absVal(integer) {
  * If the input is invalid throw an 'Invalid Input' exception.
  */
 
+// input: number > 0
+// output: number
+// example arg: 3
+// expected outcome: 14
+
+
 /* 
  * PROBLEM `findMaxDiff`: (normal)
  * Given an array of integers, write a function called `findMaxDiff` that finds
@@ -114,6 +174,11 @@ function absVal(integer) {
  *
  * If the input is invalid throw an 'Invalid Input' exception.
  */
+
+ // input: array
+ // output: number
+ // example arg: [1, 15, 6, 7, 12]
+ // expected outcome: 14
 
 /*
  * PROBLEM `insertDashes`: (normal)
@@ -123,6 +188,12 @@ function absVal(integer) {
  *
  * If the input is invalid throw an 'Invalid Input' exception.
  */
+
+// input: string of more than one letter
+// output: string
+// example arg: 'goodbye blue monday'
+// expected outcome: 'g-o-o-d-b-y-e b-l-u-e m-o-n-d-a-y'
+
 
 /*
  * PROBLEM `mySubstring`: (normal)
@@ -136,6 +207,12 @@ function absVal(integer) {
  * If the input is invalid throw an 'Invalid Input' exception.
  */
 
+// input: a string and two numbers (maybe one number with an optional third argument of type number)
+// output: string
+// example arg: 'hello', 0, 3
+// expected outcome: 'hell'
+
+
 /*
  * PROBLEM `splitSwap`: (hard)
  * Write a function called `splitSwap` that swaps two halves of a given array.
@@ -146,6 +223,13 @@ function absVal(integer) {
  *
  * If the input is invalid throw an 'Invalid Input' exception.
  */
+
+// input: array
+// output: array
+// example arg: ;[1, 'blarg', 6, 'a', '2', 2]
+// expected outcome: ['a', '2', 2, 1, 'blarg', 6]
+
+
 
 /*
  * PROBLEM `smallMultiples`: (hard)
@@ -158,6 +242,14 @@ function absVal(integer) {
  * If the input is invalid throw an 'Invalid Input' exception.
  */
 
+ // can include 1 * 1
+
+// input: two numbers
+// output: number
+// example args: (10, 3)
+// expected outcome: 3 (3*1, 3*2, 3*3)
+
+
 /*
  * PROBLEM `rot13`: (hard)
  * Create a function called `rot13` that takes an unencrypted string and returns
@@ -166,6 +258,11 @@ function absVal(integer) {
  * The input should only contain lower-case alphabetic characters. If the input
  * is invalid throw an 'Invalid Input' exception.
  */
+
+// input: string
+// output: string
+// example arg: 'password'
+// expected outcome: 'cnffjbeq'
 
 /*
  * PROBLEM `derot13`: (hard)
@@ -176,6 +273,11 @@ function absVal(integer) {
  * is invalid throw an 'Invalid Input' exception.
  */
 
+ // input: string
+ // output: string
+ // example arg: 'cnffjbeq'
+ // expected outcome: 'password'
+
 /*
  * PROBLEM `rotn`: (hard)
  * Create a function called `rotn` that takes an unencrypted string and an
@@ -184,6 +286,11 @@ function absVal(integer) {
  * The input should only contain lower-case alphabetic characters. If the input
  * is invalid throw an 'Invalid Input' exception.
  */
+
+// input: a string and an integer
+// output: string
+// example args: 'hello', 7
+// expected outcome: 'olssv'
 
 /*
  * PROBLEM `findBoth`: (hard)
@@ -194,6 +301,11 @@ function absVal(integer) {
  * If the input is invalid throw an 'Invalid Input' exception.
  */
 
+ // input: two arrays of integers
+ // output: an array of zero or more integers
+ // example arg: [2, 3, 66, 2, 4], [1, 2, 3, 4]
+ // expected outcome: [2, 4]
+
 /*
  * PROBLEM `countBoth`: (hard)
  * Write a function called `countBoth` that takes two arrays of integers a and
@@ -202,6 +314,12 @@ function absVal(integer) {
  *
  * If the input is invalid throw an 'Invalid Input' exception.
  */
+
+// input: two arrays of integers
+// output: number
+// example arg: [2, 3, 66, 2, 4], [1, 2, 3, 4]
+// expected outcome: 2
+
 
 /*
  * PROBLEM `isDiagonalMatrix`: (nightmare)
@@ -235,6 +353,17 @@ function absVal(integer) {
  * If the input is invalid throw an 'Invalid Input' exception.
  */
 
+ // input: array of arrays
+ // output: boolean
+ /* example arg: 
+		[
+			[1, 0, 0],
+   			[0, 2, 0],
+   			[0, 0, 3]
+ 		]
+ */
+// expected outcome: true
+
 /*
  * PROBLEM `isAnagram`: (nightmare) - Actual Interview Question
  * An anagram is a type of word play, the result of rearranging the letters of a
@@ -256,6 +385,15 @@ function absVal(integer) {
  *
  * If the input is invalid throw an 'Invalid Input' exception.
  */
+
+// input: two arrays of equal length
+// output: an array of the same length as the input arrays
+// example arg: 
+// 			['spit', 'eels', 'burp'],
+// 			['pits', 'else', 'rube']
+// expected outcome:
+// 			[true, true, false]
+
 
 /*
  * PROBLEM `validateParentheses`: (nightmare) - Actual Interview Question
@@ -280,6 +418,11 @@ function absVal(integer) {
  * If the input is invalid throw an 'Invalid Input' exception.
  */
 
+// input: a string that contains only (, ), [, ], {, or } 
+// output: boolean
+// example arg: '({([])})'
+// expected outcome: true
+
 /*
  * PROBLEM `flattenArray`: (nightmare) - Actual Interview Question
  * Write a function called flattenArray that takes an array of any type of
@@ -293,6 +436,12 @@ function absVal(integer) {
  *
  * Insane mode: do this without recursion.
  */
+
+
+ // input: array
+ // output: array
+ // example arg: [1, 2, ['a', 3], 'ww', 33]
+ // expected outcome: [1, 2, 'a', 3, 'ww', 33]
 
 /*
  * Do not modify the code below
