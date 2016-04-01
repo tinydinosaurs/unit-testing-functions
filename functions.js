@@ -12,8 +12,14 @@
  // example arg: 'hello'
  // expected outcome: false
 
+
 function checkData(inputString) {
 	// your code goes here
+	if(typeof inputString === 'string') {
+		return inputString.length === 3;
+	} else {
+		throw new Error('Invalid Input');
+	}
 }
 
 /*
@@ -31,6 +37,15 @@ function checkData(inputString) {
 
 function concatenateArrays(a, b) {
 	// your code goes here
+	 if(b === undefined) {
+	 	throw new Error('Invalid Input')
+	 }
+
+	 if(!Array.isArray(a) || !Array.isArray(b)) {
+		throw new Error('Invalid Input');
+	}
+
+	 return a.concat(b);
 }
 
 /*
@@ -50,6 +65,17 @@ function concatenateArrays(a, b) {
 
 function fixProperNoun(noun) {
 	// your code goes here
+	if(typeof noun !== 'string') {
+		throw new Error('Invalid Input');
+	}
+
+	if(noun === '') {
+		throw new Error('Invalid Input');
+	}
+
+	var properNoun = noun.toLowerCase();
+	
+	return properNoun.charAt(0).toUpperCase() + properNoun.substring(1, properNoun.length)
 }
 
 /*
@@ -60,9 +86,23 @@ function fixProperNoun(noun) {
  * If the input is invalid throw an 'Invalid Input' exception.
  */
 
+// input: string
+// output: string
+// example arg: 'silly'
+// expected outcome: 'illsy'
+
 
 function sortLetters(inputString) {
 	// your code goes here
+
+	if(typeof inputString !== 'string') {
+		throw new Error('Invalid Input');
+	}
+
+	if(inputString === '') {
+		throw new Error('Invalid Input');
+	}
+	return inputString.split('').sort().join('').trim();
 }
 
 /*
@@ -80,6 +120,19 @@ function sortLetters(inputString) {
 
 function absVal(integer) {
 	// your code goes here
+	if(typeof integer !== 'number') {
+		throw new Error('Invalid Input');
+	}
+
+	if(Math.round(integer) !== integer) {
+		throw new Error('Invalid Input');
+	}
+
+	if(integer > 0) {
+		return integer;	
+	} else {
+		return 0 - integer;
+	}
 }
 
 /*
@@ -94,6 +147,30 @@ function absVal(integer) {
  // output: one number
  // example arg: 7, 2022
  // expected outcome: 7
+
+ function myMin(num1, num2) {
+ 	if(num2 === undefined) {
+ 		throw new Error('Invalid Input');
+ 	}
+
+	if(Math.round(num1) !== num1) {
+	 	throw new Error('Invalid Input');
+	}
+
+	if(Math.round(num2) !== num2) {
+		 	throw new Error('Invalid Input');
+	}
+
+ 	if(!typeof num1 === 'number') {
+ 		throw new Error('Invalid Input'); 		
+ 	}
+
+ 	if(num1 <= num2) {
+ 		return num1;
+ 	} else {
+ 		return num2;
+ 	}
+ }
 
 /*
  * PROBLEM `myMax`: (normal) - Actual Interview Question
@@ -110,7 +187,17 @@ function absVal(integer) {
 // example arg: [1, 1, 3, 5, 8, 13, 21, 34, 55]
 // expected outcome: 55
 
+function myMax(inputArray) {
+	if(inputArray[0] === undefined) {
+		throw new Error('Invalid Input')	
+	}
 
+	inputArray.sort();
+	if(typeof inputArray[inputArray.length -1] !== 'number') {
+		throw new Error('Invalid Input')
+	}
+	return inputArray[inputArray.length - 1];
+}
 /*
  * PROBLEM `getMonth`: (normal)
  * Write a function called `getMonth` that maps a given integer to a month.
@@ -128,6 +215,9 @@ function absVal(integer) {
 // example arg: 5
 // expected outcome: 'May'
 
+function getMonth() {
+
+}
 
 /*
  * PROBLEM `randomElement`: (normal)
@@ -140,7 +230,18 @@ function absVal(integer) {
 // example arg: [3, 'bunnies', ['are', 'plenty'], {hi: 'bunny, hello: 'rabbit'}]
 // expected outcome: ['are', 'plenty']
 
+function randomElement(arr) {
+	var randomIndex = Math.floor(Math.random() * arr.length);
 
+	if(!Array.isArray(arr)) {
+		throw new Error('Invalid Input');
+	}
+
+	if(arr[0] === undefined) {
+		throw new Error('Invalid Input');
+	}
+	return arr[randomIndex];
+}
 /*
  * PROBLEM `studentPairs`: (normal)
  * Create a javascript function called `studentPairs` that takes an array of
@@ -152,6 +253,10 @@ function absVal(integer) {
  // output: an array of arrays
  // example arg: ['Dana', 'Will', 'Jen', 'Martin']
  // expected outcome: [['Dana', 'Jen'], ['Will', 'Martin']]
+
+ function studentPairs() {
+
+ }
 
 /*
  * PROBLEM `sumSquares`: (normal)
@@ -166,7 +271,26 @@ function absVal(integer) {
 // example arg: 3
 // expected outcome: 14
 
+function sumSquares(num) {
+	var total = 0;
+	
+	if(Math.round(num) !== num) {
+		throw new Error('Invalid Input');
+	}
 
+	if(num === 0) {
+		throw new Error('Invalid Input');
+	}
+
+	if(num < 0) {
+			throw new Error('Invalid Input');
+		}
+
+	for(i = num; i > 0; i--) {
+		total += i*i;
+	}
+	return total;
+}
 /* 
  * PROBLEM `findMaxDiff`: (normal)
  * Given an array of integers, write a function called `findMaxDiff` that finds
@@ -177,8 +301,27 @@ function absVal(integer) {
 
  // input: array
  // output: number
- // example arg: [1, 15, 6, 7, 12]
+ // example arg: [6, 15, 1, 7, 12]
  // expected outcome: 14
+
+function findMaxDiff(numArray) {
+	var maxDiff = 0;
+	
+	if(numArray[0] === undefined) {
+		throw new Error('Invalid Input');
+	}
+
+	if(numArray[1] === undefined) {
+			throw new Error('Invalid Input');
+		}
+
+	for(var i = 1; i < numArray.length; i++) {
+		if(Math.abs(numArray[i] - numArray[i-1]) > maxDiff) {
+			maxDiff = Math.abs(numArray[i] - numArray[i-1]);
+		}
+	}
+	return maxDiff;
+}
 
 /*
  * PROBLEM `insertDashes`: (normal)
@@ -194,6 +337,9 @@ function absVal(integer) {
 // example arg: 'goodbye blue monday'
 // expected outcome: 'g-o-o-d-b-y-e b-l-u-e m-o-n-d-a-y'
 
+function insertDashes() {
+
+}
 
 /*
  * PROBLEM `mySubstring`: (normal)
