@@ -17,9 +17,8 @@ function checkData(inputString) {
 	// your code goes here
 	if(typeof inputString === 'string') {
 		return inputString.length === 3;
-	} else {
-		throw new Error('Invalid Input');
-	}
+	} 
+	throw new Error('Invalid Input');
 }
 
 /*
@@ -128,7 +127,7 @@ function absVal(integer) {
 		throw new Error('Invalid Input');
 	}
 
-	if(integer > 0) {
+	if(integer >= 0) {
 		return integer;	
 	} else {
 		return 0 - integer;
@@ -215,8 +214,18 @@ function myMax(inputArray) {
 // example arg: 5
 // expected outcome: 'May'
 
-function getMonth() {
+function getMonth(num) {
+	var year = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
+	if(typeof num !== 'number') {
+ 		throw new Error('Invalid Input'); 		
+ 	}
+
+ 	if(num <=0 || num > 12) {
+ 		throw new Error('Invalid Input');
+ 	}
+
+ 	return year[num - 1];
 }
 
 /*
@@ -254,7 +263,7 @@ function randomElement(arr) {
  // example arg: ['Dana', 'Will', 'Jen', 'Martin']
  // expected outcome: [['Dana', 'Jen'], ['Will', 'Martin']]
 
- function studentPairs() {
+ function studentPairs(studentArray) {
 
  }
 
@@ -337,7 +346,7 @@ function findMaxDiff(numArray) {
 // example arg: 'goodbye blue monday'
 // expected outcome: 'g-o-o-d-b-y-e b-l-u-e m-o-n-d-a-y'
 
-function insertDashes() {
+function insertDashes(myString) {
 
 }
 
@@ -358,7 +367,9 @@ function insertDashes() {
 // example arg: 'hello', 0, 3
 // expected outcome: 'hell'
 
+function mySubstring(myString, num1, num2) {
 
+}
 /*
  * PROBLEM `splitSwap`: (hard)
  * Write a function called `splitSwap` that swaps two halves of a given array.
@@ -375,6 +386,14 @@ function insertDashes() {
 // example arg: ;[1, 'blarg', 6, 'a', '2', 2]
 // expected outcome: ['a', '2', 2, 1, 'blarg', 6]
 
+function splitSwap(arr) {
+	if(arr[0] === undefined) {
+		throw new Error('Invalid Input');
+	}
+
+	splitIndex = Math.floor(arr.length / 2);
+	return arr.slice(splitIndex).concat(arr.slice(0, splitIndex))
+}
 
 
 /*
@@ -395,7 +414,9 @@ function insertDashes() {
 // example args: (10, 3)
 // expected outcome: 3 (3*1, 3*2, 3*3)
 
+function smallMultiples(num1, num2) {
 
+}
 /*
  * PROBLEM `rot13`: (hard)
  * Create a function called `rot13` that takes an unencrypted string and returns
@@ -409,6 +430,10 @@ function insertDashes() {
 // output: string
 // example arg: 'password'
 // expected outcome: 'cnffjbeq'
+
+function rot13(myString) {
+
+}
 
 /*
  * PROBLEM `derot13`: (hard)
@@ -424,6 +449,10 @@ function insertDashes() {
  // example arg: 'cnffjbeq'
  // expected outcome: 'password'
 
+function derot13(myString) {
+
+}
+
 /*
  * PROBLEM `rotn`: (hard)
  * Create a function called `rotn` that takes an unencrypted string and an
@@ -437,6 +466,10 @@ function insertDashes() {
 // output: string
 // example args: 'hello', 7
 // expected outcome: 'olssv'
+
+function rotn(myString) {
+
+}
 
 /*
  * PROBLEM `findBoth`: (hard)
@@ -452,6 +485,14 @@ function insertDashes() {
  // example arg: [2, 3, 66, 2, 4], [1, 2, 3, 4]
  // expected outcome: [2, 4]
 
+function findBoth(arr1, arr2) {
+	var commonElements = [];
+
+
+
+	return commonElements;
+}
+
 /*
  * PROBLEM `countBoth`: (hard)
  * Write a function called `countBoth` that takes two arrays of integers a and
@@ -466,6 +507,10 @@ function insertDashes() {
 // example arg: [2, 3, 66, 2, 4], [1, 2, 3, 4]
 // expected outcome: 2
 
+
+function countBoth(arr1, arr2) {
+
+}
 
 /*
  * PROBLEM `isDiagonalMatrix`: (nightmare)
@@ -510,6 +555,10 @@ function insertDashes() {
  */
 // expected outcome: true
 
+function isDiagonalMatrix(matrix) {
+
+}
+
 /*
  * PROBLEM `isAnagram`: (nightmare) - Actual Interview Question
  * An anagram is a type of word play, the result of rearranging the letters of a
@@ -541,6 +590,30 @@ function insertDashes() {
 // 			[true, true, false]
 
 
+function isAnagram(arr1, arr2) {
+	if(arr1[0] === undefined || arr2[0] === undefined) {
+		throw new Error('Invalid Input');
+	}
+
+	if(arr1.length !== arr2.length) {
+		throw new Error('Invalid Input');
+	}
+
+	var anagramTruth = []
+
+	arr1 = arr1.map(sortLetters);
+	arr2 = arr2.map(sortLetters);
+
+	for(i = 0; i < arr1.length; i++) {
+		if(arr1[i] === arr2[i]) {
+			anagramTruth.push(true);
+		} else {
+			anagramTruth.push(false);
+		}
+	}
+	return anagramTruth;
+} 
+
 /*
  * PROBLEM `validateParentheses`: (nightmare) - Actual Interview Question
  * Write a function called `validateParentheses` that takes a string of
@@ -569,6 +642,9 @@ function insertDashes() {
 // example arg: '({([])})'
 // expected outcome: true
 
+function validateParentheses(parenString) {
+
+}
 /*
  * PROBLEM `flattenArray`: (nightmare) - Actual Interview Question
  * Write a function called flattenArray that takes an array of any type of
